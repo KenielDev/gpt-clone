@@ -1,5 +1,6 @@
 import React from "react";
 import { QuestionHeader, WrapperResponse } from "./styles";
+import { Container } from "../../pages/home/styles";
 
 interface PropsResponse {
   questionHeaderText: string | null;
@@ -12,8 +13,10 @@ export default function ResponseBox({
 }: PropsResponse) {
   return (
     <WrapperResponse>
-      <QuestionHeader>{questionHeaderText}</QuestionHeader>
-      {children}
+      <QuestionHeader>
+        <Container>{questionHeaderText}</Container>
+      </QuestionHeader>
+      <Container>{children}</Container>
     </WrapperResponse>
   );
 }

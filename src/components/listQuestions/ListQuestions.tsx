@@ -12,9 +12,13 @@ interface ListProps {
 export default function ListQuestions({ list }: ListProps) {
   return (
     <ListWrapper>
-      {list.map((question) => {
-        return <ListItem>{question.nome}</ListItem>;
-      })}
+      {list.length === 0 ? (
+        <p>Nenhuma pergunta até o momento</p>
+      ) : (
+        list.map((question, index) => {
+          return <ListItem key={index}>{question.nome}</ListItem>;
+        })
+      )}
     </ListWrapper>
   );
 }

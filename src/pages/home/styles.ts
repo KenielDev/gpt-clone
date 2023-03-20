@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import { HTMLAttributes } from "react";
+import styled, { ThemedStyledProps } from "styled-components";
+
+interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
+  flexDirection?: string;
+}
 
 export const Title = styled.h1`
   font-size: 1.5em;
@@ -7,7 +12,7 @@ export const Title = styled.h1`
 `;
 
 export const Wrapper = styled.div`
-  background-color: #353741;
+  background-color: #444654;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -16,7 +21,12 @@ export const Wrapper = styled.div`
   color: white;
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<ThemedStyledProps<ContainerProps, any>>`
   width: 60%;
   margin: auto;
+`;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

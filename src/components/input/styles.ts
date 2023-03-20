@@ -39,16 +39,18 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
+  border: none;
   position: absolute;
   border-radius: 4px;
   text-align: center;
   color: #6b7280;
   transition: all 0.2s;
+  background-color: transparent;
 
   @media (min-width: 768px) {
-    bottom: 2.5rem;
-    right: 1rem;
-    top: 1.2rem;
+    right: 0.7rem;
+    top: 0.9rem;
   }
 
   &:hover:not(:disabled) {
@@ -66,8 +68,8 @@ export const Button = styled.button`
   }
 
   svg {
-    height: 1em;
-    width: 1em;
+    height: 1.2em;
+    width: 1.2em;
     margin-right: 4px;
     stroke: currentColor;
     fill: none;
